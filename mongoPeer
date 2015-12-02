@@ -1,0 +1,9 @@
+db.bios.find({"awards.by": "IEEE"}, {"name":1})
+db.bios.update({name: "New"},{"_id": 11, "name":{"first":"Amanda", "last":"Bausch"}, "birth" : "yup"},{upsert: true})
+db.bios.find().limit(3).pretty()
+db.bios.find().sort({"name": 1}).pretty()
+db.bios.find().count()
+db.bios.find().sort({"_id":-1}).pretty()
+
+We accidentally didn't read the instructions fully and spent time just randomly trying different methods,
+re-ordering, inserting and removing...We actually learned a lot...just not in that precise order.
